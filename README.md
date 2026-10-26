@@ -8,6 +8,18 @@ Works with any AI coding assistant that can read and edit files in your project.
 
 ---
 
+## Why this exists
+
+I built this for my own projects in October 2026, after watching where AI coding tools were heading: more autonomy, longer unattended runs, fewer moments where a person has to say yes. The output gets faster and the developer understands less of it. Two weeks later nobody can explain why the code looks the way it does.
+
+I wanted the opposite. Not a brake on the assistant, but a way of working where the human stays in the process: present at each step, making the decisions, and able to hand the work to a future self or a teammate without archaeology. The instruction files that tools offer, such as CLAUDE.md, tell the assistant how to behave. Nothing held the state of the work itself: what was decided, what was rejected and why, what is half done.
+
+So the journal is a shared record that the developer and the assistant write together, with the developer as the decision point by protocol rather than by habit. It is tool-agnostic because what is being shared is a working practice, not an integration.
+
+It is published so other developers can use it, and so the practice has a dated, public origin.
+
+Mirella Batista, October 2026
+
 ## Why use it
 
 Reasons developers adopt a dev journal. This list grows as we hear from people using it.
