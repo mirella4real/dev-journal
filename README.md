@@ -64,6 +64,8 @@ The journal entries then capture the reasoning, so the decisions you worked thro
 
 **CLAUDE.md** (and its equivalents in other tools) tells the assistant how to behave. It is static instructions, specific to one tool, and it records nothing about what happened. A dev journal is a dated, living record of what was done, what was decided, and what's still open. It is tool-agnostic, and both the developer and the assistant read and write it. The two complement each other: CLAUDE.md can point at the journal.
 
+**An assistant's own memory** (Claude Code's memory directory, or its equivalent elsewhere) persists across sessions, but it belongs to the tool, not the project. The assistant writes it on its own judgment, it lives outside your repository, and it is gone when you switch tools. A dev journal is written with your approval, lives with the code, and works with any assistant. The two can coexist: the journal is the record, memory is the assistant's private notes about how to work with you.
+
 **A notes file** has no structure and no protocol. A dev journal has both:
 
 - A startup procedure the assistant follows every session: read the journal, confirm what was read, brief the developer.
