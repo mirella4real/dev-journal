@@ -1,28 +1,52 @@
-# Dev Journal
+# What is a dev journal?
 
-A shared journal for a developer and their AI coding assistant. It keeps the context, decisions, and open work of a project in one place that both of you read and write, so no session starts from zero and the human stays in control of every change.
+This is a shared journal for a developer and their AI coding assistant. Imagine both of you writing to the same notebook, reading each other's notes, and reminding each other of where you left off and why you did what you did. It's a cozy partnership, and true peer development.
 
-Works with any AI coding assistant that can read and edit files in your project.
+It is a directory containing instructions, journal entries and even recipes for tasks a developer wants to have handy. It sits inside your project. If you use a remote repository, you decide whether it stays on your machine or is pushed with your code.
 
-<!-- Draft: structure and wording still being fine-tuned. -->
+A dev journal keeps the context, decisions, and to-do list of a project in one place that both of you read and write. No chat session starts from zero, the human keeps as much control over every change as they want, and a refresher is one ask away.
+
+Tested with Claude Code and IBM Bob. It should work with any AI coding assistant that can read and edit files in your project.
+
+---
+
+## Contents
+
+- [Why this exists](#why-this-exists)
+- [How it works](#how-it-works)
+- [Why use it](#why-use-it)
+- [Who it's for](#who-its-for)
+- [Keeping the human in the process](#keeping-the-human-in-the-process)
+- [How it differs from CLAUDE.md or a notes file](#how-it-differs-from-claudemd-or-a-notes-file)
+- [What's in the template](#whats-in-the-template)
+- [Getting started](#getting-started)
+- [What you can ask for](#what-you-can-ask-for)
+- [Using it in a team](#using-it-in-a-team)
+- [Repository layout](#repository-layout)
+- [Status](#status)
+- [License](#license)
 
 ---
 
 ## Why this exists
 
-I built this for my own projects in October 2026, after watching where AI coding tools were heading: more autonomy, longer unattended runs, fewer moments where a person has to say yes. The output gets faster and the developer understands less of it. Two weeks later nobody can explain why the code looks the way it does.
+I came up with this idea while working on my own projects, after watching where AI coding tools were heading: more autonomy, longer unattended runs, fewer moments where a person has to say yes. The output gets faster and the developer understands less of it. Two weeks later nobody can explain why the code looks the way it does.
 
-I wanted the opposite. Not a brake on the assistant, but a way of working where the human stays in the process: present at each step, making the decisions, and able to hand the work to a future self or a teammate without archaeology. The instruction files that tools offer, such as CLAUDE.md, tell the assistant how to behave. Nothing held the state of the work itself: what was decided, what was rejected and why, what is half done.
+I wanted the opposite. Not a brake on the assistant, but a way of working where I could stay in the process (and quite frankly, dictate the speed): present at each step, making the decisions, and able to hand the work to a future self or a teammate without archaeology. The instruction files that tools offer, such as CLAUDE.md, tell the assistant how to behave. Nothing held the state of the work itself: what was decided, what was rejected and why, what is half done.
 
-So the journal is a shared record that the developer and the assistant write together, with the developer as the decision point by protocol rather than by habit. It is tool-agnostic because what is being shared is a working practice, not an integration.
+So the journal is a shared record captured in Markdown files that the developer and the assistant write together, with the developer as the decision point by protocol rather than by habit. It is tool-agnostic because what is being shared is a working practice, not an integration.
 
-It is published so other developers can use it, and so the practice has a dated, public origin.
+I am sharing this idea so other developers can use it, adapt it and improve on it, as we work out how to use AI while keeping the human in the process, guiding it.
 
 Mirella Batista, October 2026
 
+## How it works
+
+At the start of every chat session, I paste one prompt that gives the assistant today's date and points it at the guidelines. It reads the guidelines, the latest journal entries, the backlog, and the standards, then briefs me: where things stand, what was in progress, and what's next. Through the session it proposes journal updates as we go: tasks moved from the backlog to the day's entry, decisions recorded with their reasoning, blockers noted. I approve each one. At the end of the day it closes the entry and seeds the next one.
+
 ## Why use it
 
-Reasons developers adopt a dev journal. This list grows as we hear from people using it.
+Reasons developers adopt a dev journal. This list grows as I hear from people using it.
 
 - **Context switching without losing your place.** Move between two or more projects and pick up each one exactly where you left it. The journal records where things stand, what was in progress, and what's next, so the cost of switching drops to one start prompt.
 - **Stop re-explaining your project to every new chat.** Each session begins with the assistant reading the journal and briefing you. You don't rebuild context by hand when a chat runs out of memory or a new day starts.
@@ -37,10 +61,11 @@ Any developer who works with an AI coding assistant. The journal is deliberately
 - A solo developer tired of providing context at the start of every chat.
 - A developer who wants to capture their reasoning and decisions in a journal that they, their assistant, or other developers can refer back to.
 - A team that wants a consistent, reviewable record of AI-assisted work.
+- A hobbyist who can't code every day and needs a refresher on where the project stands before each session.
 
-## Human in the process
+## Keeping the human in the process
 
-The journal is built on one stance: the assistant proposes, the developer decides. That isn't a brake on productivity. It's how you stay the person who understands and is accountable for the work.
+I designed the journal around one idea: the assistant proposes, the developer decides. That isn't a brake on productivity. It's how you stay the person who understands and is accountable for the work.
 
 It's fine, and encouraged, to ask your assistant to slow down:
 
@@ -71,7 +96,7 @@ The journal entries then capture the reasoning, so the decisions you worked thro
 - A startup procedure the assistant follows every session: read the journal, confirm what was read, brief the developer.
 - A defined lifecycle for tasks: from the backlog, to a day's completed list, never lost between the two.
 - An approval rule for every change, which is what enforces human-in-the-loop rather than just encouraging it.
-- A standards document (the constitution) the assistant is held to, which the developer can adapt.
+- An optional standards document (the constitution) the assistant is held to, which the developer can adapt.
 
 ## What's in the template
 
@@ -88,15 +113,29 @@ The journal entries then capture the reasoning, so the decisions you worked thro
 
 ## Getting started
 
-1. Copy `dev-journal-template/` into your project. The suggested location is `.local-docs/dev-journal/`.
-2. Add `.local-docs/` to your `.gitignore` if you want the journal private to your machine. See the next section for the team option.
-3. Open a session with your assistant and paste the start prompt, replacing the date:
+1. Copy `dev-journal-template/` into your project and rename it `dev-journal/`. The suggested location is `.local-docs/dev-journal/`.
+2. Add `.local-docs/` to your `.gitignore` if you want the journal private to your machine. See [Using it in a team](#using-it-in-a-team) for the team option.
+3. Read through `SESSION_GUIDELINES.md` and enter your project information under Journal Settings. Once done, set Initialized to true. If you skip this, the assistant will walk you through the setup in your first session. Feel free to change `SESSION_GUIDELINES.md` to make it your own.
+4. Decide whether you want to adopt a constitution. `constitution.md` is provided as a starter document. Edit it to make it your own. A second constitution (`constitution-enterprise.md`) is provided as a reference in case you want enterprise-level guidance for your project. If you use GitHub's [Spec Kit](https://github.com/github/spec-kit), point the Standards files entry in Journal Settings at your existing constitution and delete the provided ones.
+5. Start a chat with your assistant and paste the start prompt, replacing the date. You can change the prompt in `SESSION_GUIDELINES.md`. The date is in the prompt on purpose. Assistants don't reliably know what day it is, so you tell them.
 
    ```
    Today is YYYY-MM-DD. Please read SESSION_GUIDELINES in .local-docs/dev-journal to start today's session.
    ```
 
-4. The first session walks you through setup: your name, project name, a greeting, and which standards file to use. After that, every session starts with the same prompt.
+## What you can ask for
+
+Once a session is running, the journal is kept through plain requests. The assistant proposes the exact change and waits for your yes. Some examples:
+
+- **Record a decision.** "Record that as a decision: we chose SQLite over Postgres because this runs on one machine." The assistant drafts a Decisions & Rationale entry with the alternatives and why they were rejected.
+- **Add a task.** "Add to the backlog: write the export script, target Friday." It goes into `RUNNING_TODO.md` with the target date.
+- **Mark a task done.** "The export script is done." It moves to Completed Today in the day's entry and comes off the backlog.
+- **Note a blocker.** "Add a blocker: waiting on the API key from ops." It goes under Blockers & Open Questions.
+- **Save a recipe.** "Save how we did that as a recipe." The assistant proposes a name and scope, then writes it to `recipes/` and adds it to the index.
+- **Get your bearings.** "Where did we leave off?" or "What's next?" The assistant answers from the journal, not from memory.
+- **Close the day.** "Let's close the day." The assistant finalizes today's entry, checks the backlog holds only open items, and seeds the next entry with the plan you give it.
+
+If a chat runs out of memory mid-day, open a new one and paste the start prompt again. The assistant picks up from the journal.
 
 ## Using it in a team
 
@@ -108,7 +147,7 @@ If a team wants to commit their journals, treat them as documentation as code: k
 dev-journal/
 ├── README.md                 this file
 ├── dev-journal-template/     the published template; copy this into your project
-└── .local-docs/dev-journal/  this repo's own journal, gitignored (we use the template to build it)
+└── .local-docs/dev-journal/  this repo's own journal, gitignored (I use the template to build it)
 ```
 
 ## Status
