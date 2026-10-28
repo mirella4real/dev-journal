@@ -180,8 +180,7 @@ Mirella Batista, October 2026
 dev-journal/
 ├── README.md                 this file
 ├── dev-journal-template/     the published template; copy this into your project
-├── docs/images/              screenshots used in this README
-└── .local-docs/dev-journal/  this repo's own journal, gitignored (I use the template to build it)
+└── docs/images/              screenshots used in this README
 ```
 
 ## Status
