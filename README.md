@@ -178,10 +178,18 @@ Mirella Batista, October 2026
 
 ```
 dev-journal/
-├── README.md                 this file
-├── dev-journal-template/     the published template; copy this into your project
-├── docs/images/              screenshots used in this README
-└── .local-docs/dev-journal/  this repo's own journal, gitignored (I use the template to build it)
+├── README.md                       this file
+├── LICENSE
+├── docs/images/                    screenshots used in this README
+└── dev-journal-template/           the published template; copy this into your project
+    ├── README.md                   developer's guide and the session start prompt
+    ├── SESSION_GUIDELINES.md       the assistant's instructions and Journal Settings
+    ├── RUNNING_TODO.md             the backlog
+    ├── constitution.md             starter development standards
+    ├── constitution-enterprise.md  enterprise-level example
+    ├── entries/                    one entry per day, YYYY-MM-DD.md
+    ├── recipes/                    recipe index and individual recipes
+    └── templates/                  entry_template.md
 ```
 
 ## Status
