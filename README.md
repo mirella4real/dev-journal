@@ -44,6 +44,20 @@ Mirella Batista, October 2026
 
 At the start of every chat session, I paste one prompt that gives the assistant today's date and points it at the guidelines. It reads the guidelines, the latest journal entries, the backlog, and the standards, then briefs me: where things stand, what was in progress, and what's next. Through the session it proposes journal updates as we go: tasks moved from the backlog to the day's entry, decisions recorded with their reasoning, blockers noted. I approve each one. At the end of the day it closes the entry and seeds the next one.
 
+```mermaid
+flowchart LR
+    A[Start prompt<br>with today's date] --> B[Assistant reads guidelines,<br>entries, backlog, standards]
+    B --> C[Briefs you:<br>where things stand, what's next]
+    C --> D{Work}
+    D -->|proposes a journal update| E[You approve]
+    E --> D
+    D --> F[Close the day:<br>finalize entry, seed next one]
+```
+
+This is what the start of a session looks like once the assistant has read the journal:
+
+![Session start in Claude Code: the greeting with today's date, then a briefing on where things stand and today's plan](docs/images/dev-journal-session-start.png)
+
 ## Why use it
 
 Reasons developers adopt a dev journal. This list grows as I hear from people using it.
@@ -147,6 +161,7 @@ If a team wants to commit their journals, treat them as documentation as code: k
 dev-journal/
 ├── README.md                 this file
 ├── dev-journal-template/     the published template; copy this into your project
+├── docs/images/              screenshots used in this README
 └── .local-docs/dev-journal/  this repo's own journal, gitignored (I use the template to build it)
 ```
 
