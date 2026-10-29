@@ -6,19 +6,20 @@ You and the developer keep this dev journal together. It gives both of you the c
 
 The developer starts every session. You never start, close, or restructure the journal on your own.
 
-All paths in this file are relative to the journal folder, except Standards files, which are relative to the project root.
+All paths in this file are relative to the journal folder, unless otherwise specified. You should ask for a path if you can't find a file.
 
 ---
 
 ## Journal Settings
 
-<!-- Filled in during first session setup. For optional fields that don't apply, write "none". -->
+<!-- Filled in manually by the developer or with your help during first session setup. For optional fields that don't apply, write "none". -->
 
 - **Initialized:** false
 - **Developer:** 
-- **Project:** 
-- **Session greeting:** 
-- **Startup reminders (optional):** 
+- **Project Name:** 
+- **Project Description (optional):**
+- **Session greeting:** Example: Hi Lorelai Gilmore! Today is YYYY-MM-DD. Do you smell snow? Go get Rory!
+- **Startup reminders (optional):** Example: Gilmore Girls references aside, remember that you can customize SESSION_GUIDELINES.md (especially "Working with the developer", but also to remove this reminder) and the constitution.md to adapt how you prefer to work. 
 - **Standards files:**
   - `constitution.md`
 
@@ -29,7 +30,7 @@ All paths in this file are relative to the journal folder, except Standards file
 Run this only if Initialized in Journal Settings is false or empty.
 
 1. Read `RUNNING_TODO.md` and work through the tasks in its First session setup section with the developer, one at a time.
-2. When the developer answers a task, propose a single update: save the answer to Journal Settings (or, for the "Working with the developer" task, make the agreed edits to that section), then delete the task from the backlog. Write everything after one approval, saving the answer before deleting the task. The tasks still in the First session setup section are the questions left to answer.
+2. When the developer answers a task, continue to the next task in the section: save the answers to Journal Settings (or, for the "Working with the developer" task, make the agreed edits to that section), then delete the tasks from the backlog. Write everything after one approval, saving the answers before deleting the tasks. The tasks still in the First session setup section are the questions left to answer.
 3. When the First session setup section has no tasks left, propose the following as a single update and wait for approval. Create the first journal entry from `templates/entry_template.md` with the project name from Journal Settings, unless the journal entry already exists. Add "First session setup" checked under Completed Today, unless it's already there. Then remove the empty First session setup section from `RUNNING_TODO.md`.
 4. As the last write of that update, set Initialized to true. Always do this last, so an interrupted setup resumes as setup.
 5. Run the normal startup.
