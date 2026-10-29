@@ -1,5 +1,5 @@
 # Dev Journal: YYYY-MM-DD
-**Project:** {{project_name}}
+**Project Name:** {{project_name}}
 
 ## Today's Plan
 <!-- Freeform: priorities, thoughts, and reminders for the day. Not a checklist. Belongs to the developer. Usually seeded when the previous day is closed. -->

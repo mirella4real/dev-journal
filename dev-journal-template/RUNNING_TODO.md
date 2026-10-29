@@ -1,5 +1,5 @@
 # Running To-Do List
-**Project:** {{project_name}}
+**Project Name:** {{project_name}}
 
 The backlog: the single source of truth for open tasks.
 
@@ -18,7 +18,7 @@ How this file works:
 - [ ] Ask for the project name. Also fill it in at the top of this file
 - [ ] Ask how the developer would like to be greeted at the start of each session (default: `Dev Journal | <project name> | YYYY-MM-DD`)
 - [ ] Ask for any startup reminders (authentication, services to start, environment checks). If none, save "none"
-- [ ] Introduce the constitution: it holds the standards the developer and the assistant agree to follow during development. Ask the developer to review `constitution.md` and either adapt it to their project or replace it with their project's own constitution. If they use their own, replace `constitution.md` in Standards files with its path. Ask about any other standards files to include (coding guidelines, contributing guides) and add each to the Standards files list. Write every Standards files path relative to the project root, including the constitution's (for example, `.dev-journal/constitution.md`)
+- [ ] Introduce the constitution: it holds the standards the developer and the assistant agree to follow during development. Ask the developer to review `constitution.md` and either adapt it to their project or replace it with their project's own constitution. If they use their own, replace `constitution.md` in Standards files with its path. Ask about any other standards files to include (coding guidelines, contributing guides) and add each to the Standards files list. Paths are relative to the journal folder, so the provided constitution stays as `constitution.md`. For a standards file outside the journal folder, write its path from the project root (for example, `docs/CONTRIBUTING.md`)
 - [ ] Walk through the "Working with the developer" section in SESSION_GUIDELINES.md and adjust it to how the developer likes to work
 
 ## Tasks
