@@ -152,13 +152,15 @@ The journal entries then capture the reasoning, so the decisions you worked thro
 
 1. Copy `dev-journal-template/` into your project and rename it `dev-journal/`. The suggested location is `.local-docs/dev-journal/`.
 2. Add `.local-docs/` to your `.gitignore` if you want the journal private to your machine. See [Using it in a team](#using-it-in-a-team) for the team option.
-3. Read through `SESSION_GUIDELINES.md` and enter your project information under Journal Settings. Once done, set Initialized to true. If you skip this, the assistant will walk you through the setup in your first session. Feel free to change `SESSION_GUIDELINES.md` to make it your own.
+3. Read through `SESSION_GUIDELINES.md` and enter your project information under Journal Settings. Once done, set Initialized to true. If you skip this, the assistant will walk you through the setup in your first session (step 6). Feel free to change `SESSION_GUIDELINES.md` to make it your own.
 4. Decide whether you want to adopt a constitution. `constitution.md` is provided as a starter document. Edit it to make it your own. A second constitution (`constitution-enterprise.md`) is provided as a reference in case you want enterprise-level guidance for your project. If you use GitHub's [Spec Kit](https://github.com/github/spec-kit), point the Standards files entry in Journal Settings at your existing constitution and delete the provided ones.
 5. Start a chat with your assistant and paste the start prompt, replacing the date. You can change the prompt in `SESSION_GUIDELINES.md`. The date is in the prompt on purpose. Assistants don't reliably know what day it is, so you tell them.
 
    ```
    Today is YYYY-MM-DD. Please read SESSION_GUIDELINES in .local-docs/dev-journal to start today's session.
    ```
+
+6. **First session setup, once.** If Initialized is still false when you paste the start prompt, the assistant runs a one-time setup before the normal startup. It works through the setup tasks in `RUNNING_TODO.md` one question at a time: your name, the project name, how you want to be greeted, any startup reminders, which constitution and standards files to use, and how you like to work (the "Working with the developer" section of `SESSION_GUIDELINES.md`). When every question is answered it proposes the updates for your approval: the answers saved to Journal Settings, the setup tasks removed from the backlog, the first journal entry created, and Initialized set to true. Then the normal session starts: greeting, briefing, and work. Every later session skips straight to that startup.
 
 ## Using it in a team
 
