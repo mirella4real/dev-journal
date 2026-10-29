@@ -18,7 +18,7 @@ All paths in this file are relative to the journal folder, unless otherwise spec
 - **Developer:** 
 - **Project Name:** 
 - **Project Description (optional):**
-- **Session greeting:** Example: Hi Lorelai Gilmore! Today is YYYY-MM-DD. Do you smell snow? Go get Rory!
+- **Session greeting:** Example: Lorelai! It's YYYY-MM-DD and it smells like snow. Coffee's on, Rory's waiting, let's go.
 - **Startup reminders (optional):** Example: Gilmore Girls references aside, remember that you can customize SESSION_GUIDELINES.md (especially "Working with the developer", but also to remove this reminder) and the constitution.md to adapt how you prefer to work. 
 - **Standards files:**
   - `constitution.md`
