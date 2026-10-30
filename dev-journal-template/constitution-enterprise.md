@@ -146,10 +146,10 @@ This section is designed to be reusable across software projects, independent of
 
 - User-facing strings MUST NOT be hardcoded in component markup, backend response bodies, or other source files.
 - Labels, headings, errors, notifications, tooltips, placeholders, and confirmations MUST use stable, descriptive, feature-namespaced keys.
-- Message files MUST be stored in a designated messages directory, with one resource file per locale.
+- String resource files MUST be stored in a designated `strings` directory, with one resource file per locale. User-facing strings, error messages, and warnings all live there.
 - Backend user-facing messages and API errors MUST use the same externalization model.
 - The design MUST remain decoupled from a specific internationalization library.
-- Additional locales MUST be addable through message resources without feature-code changes.
+- Additional locales MUST be addable through string resources without feature-code changes.
 
 ### 2.11 Logging, observability, and auditability
 
